@@ -1,162 +1,267 @@
-<DOCTYPE HTML>
-      <html>
-            <tittle>sumit.web</tittle>
-            <head>
-            <link rel="stylesheet" href="sumit.css">
-            <script src="sumit.js"></script>
-<section class="screen garden" id="garden">
-      <span class="bubble bubble-a"></span><span class="bubble bubble-b"></span><span class="bubble bubble-c"></span>
-        <div class="section-copy">
-            <p class="eyebrow">OUR GARDEN</p>
-                <h2>Garden of Love</h2>
-                    <div class="quote-card">
-                          <p id="quoteText">“You are my today and all of my tomorrows.”</p>
-                                <span class="quote-count" id="quoteCount">1 / 8</span>
-                                    </div>
-                                        <button class="primary-button" id="pickRose" type="button"><span>🌹</span> Pick a Rose</button>
-                                            <p class="garden-note" id="gardenNote" aria-live="polite"></p>
-                                              </div>
-                                              </section>
 
-                                              <section class="screen letter-section" id="letter">
-                                                <div class="letter-content">
-                                                    <p class="eyebrow">A MESSAGE FOR YOU</p>
-                                                        <h2>The Love Letter</h2>
-                                                            <button class="envelope" id="envelope" type="button" aria-label="Open the love letter">
-                                                                  <span class="envelope-flap"></span><span class="envelope-heart">♥</span>
-                                                                      </button>
-                                                                          <p class="hint">Click the envelope to open ♥</p>
-                                                                              <article class="letter-paper" id="letterPaper">
-                                                                                    <span class="paper-rose">🌹</span>
-                                                                                          <h3>To You, My Love...</h3>
-                                                                                                <p class="letter-preview">There are not enough words in any language to describe what you mean to me.</p>
-                                                                                                      <div class="letter-full" id="letterFull">
-                                                                                                              <p>There are not enough words in any language to describe what you mean to me. You are the warmth of the morning sun, the calm of a quiet night, and the joy in between.</p>
-                                                                                                                      <p>Every day with you feels like a beautiful dream I never want to wake up from. You have changed my world in the most wonderful way, and I am so grateful that our paths crossed.</p>
-                                                                                                                              <p>Thank you for being you, for your kindness, your laughter, and the little moments that mean everything. If I could choose again, in every lifetime, I would still choose you.</p>
-                                                                                                                                      <p class="signature">Forever yours, ♥</p>
-                                                                                                                                            </div>
-                                                                                                                                                </article>
-                                                                                                                                                  </div>
-                                                                                                                                                  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f4">
+  <meta name="description" content="A little romantic world made by Sumit for Lovely.">
+  <title>Sumit ♡ Lovely | Our Little World</title>
 
-<!-- Love page buttons -->
-<section class="love-menu">
-  <a href="#rose-section">🌹 Open the Rose</a>
-  <a href="#letter-section">💌 Read My Letter</a>
-  <a href="#photo-section">📸 Our Memories</a>
-</section>
+  <link rel="stylesheet" href="sumit.css">
+  <script src="sumit.js" defer></script>
+</head>
 
-<!-- Rose section -->
-<section id="rose-section" class="love-card">
-  <h2>A Rose for You 🌹</h2>
-  <p>Lovely, this rose is only for you.</p>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
-  <button id="roseButton" type="button">
-    Click to Open Your Rose
-  </button>
+  <header class="topbar">
+    <a class="brand" href="#home">S <span>♡</span> L</a>
 
-  <div id="roseMessage" class="hidden">
-    <div class="big-rose">🌹</div>
-    <h3>For My Lovely ❤️</h3>
-    <p>You make my world more beautiful.</p>
-  </div>
-</section>
+    <nav aria-label="Main navigation">
+      <a href="#garden">Garden</a>
+      <a href="#letter">Letter</a>
+      <a href="#memories">Memories</a>
+      <a href="#surprise">Surprise</a>
+    </nav>
+  </header>
 
-<!-- Love letter section -->
-<section id="letter-section" class="love-card">
-  <h2>A Letter From Sumit 💌</h2>
-  <p>A little message from my heart to yours.</p>
+  <main>
+    <!-- Welcome section -->
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">A LITTLE WORLD MADE FOR YOU</p>
 
-  <button id="letterButton" type="button">
-    Open My Love Letter
-  </button>
+        <h1>Sumit <span class="heart">♥</span><br>
+          <span class="name-accent">Lovely</span>
+        </h1>
 
-  <div id="loveLetter" class="letter hidden">
-    <h3>My Lovely ❤️</h3>
-    <p>
-      You are a special part of my life.
-      Your smile makes my days brighter,
-      and every memory with you means so much to me.
-    </p>
-    <p>
-      No matter how far we go, I hope we keep
-      making beautiful memories together.
-    </p>
-    <p class="signature">Forever yours,<br>Sumit ❤️</p>
+        <p class="hero-description">
+          Some people make ordinary days feel magical.
+          You are that person in my story.
+        </p>
 
-    <button id="closeLetterButton" type="button">
-      Close Letter
-    </button>
-  </div>
-</section>
+        <a class="button primary" href="#garden">
+          Enter Our Little World <span>♡</span>
+        </a>
 
-<section id="photo-section" class="love-card">
-  <h2>Our Beautiful Memories 📸</h2>
+        <p class="tiny-note">Made with love, just for you.</p>
+      </div>
 
-  <div class="photo-grid">
-    <img src="IMG_a2dc252e-70a5-4b4c-8c27-b 34a3d65b315.jpg"
-         alt="Our first memory">
-    <img src="file_0000000057848211b8bee136b eb82837.png"
-         alt="Our second memory">
-    <img src="file_00000000e9a881fa9c73449c6 1b9a72e.png"
-         alt="Our third memory">
-  </div>
-</section>
+      <div class="hero-art" aria-label="A romantic rose illustration">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="rose-illustration" aria-hidden="true">🌹</div>
+        <span class="floating-heart heart-one">♥</span>
+        <span class="floating-heart heart-two">♡</span>
+        <span class="floating-heart heart-three">♥</span>
 
-<!-- Final surprise -->
-<section id="surprise-section" class="love-card">
-  <h2>One Last Surprise 🎁</h2>
+        <div class="art-caption">
+          <span>MY FAVOURITE PERSON</span>
+          <strong>Always you, Lovely.</strong>
+        </div>
+      </div>
+    </section>
 
-  <button id="surpriseButton" type="button">
-    Open Your Surprise
-  </button>
+    <!-- Love garden -->
+    <section class="section garden" id="garden">
+      <div class="section-heading">
+        <p class="eyebrow">CHAPTER ONE · THE GARDEN</p>
+        <h2>A Rose for <span>My Lovely</span></h2>
+        <p>Every petal holds a little thought of you.</p>
+      </div>
 
-  <p id="surpriseMessage" class="hidden">
-    Lovely, you will always have a special place in my heart. ❤️🌹
-  </p>
-</section>
+      <div class="garden-card">
+        <div class="garden-flower" aria-hidden="true">🌹</div>
 
-                                                                                                                                                                                            </article>
-                                                                                                                                                                                                  <article class="photo-card card-main">
-                                                                                                                          
-                                                                                                                                                                                                                  <p>With Love <span>♡</span></p>
-                                                                                                                                                                                                                          <small>“You are the love in my story.”</small>
-                                                                                                                                                                                                                                </article>
-                                                                                                                                                                                                                                      <article class="photo-card card-back right-card">
-                                                                                                                                                                                                                                              <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=700&q=85" alt="A couple holding hands">
-                                                                                                                                                                                                                                                      <p>I never want to let go of this hand.</p>
-                                                                                                                                                                                                                                                            </article>
-                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                    <div class="memory-controls">
-                                                                                                                                                                                                                                                                          <button class="round-button" id="prevMemory" type="button" aria-label="Previous memory">‹</button>
-                                                                                                                                                                                                                                                                                <span class="memory-indicator" id="memoryIndicator">● ○ ○</span>
-                                                                                                                                                                                                                                                                                      <button class="round-button" id="nextMemory" type="button" aria-label="Next memory">›</button>
-                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                            </section>
+        <p class="garden-quote" id="quoteText" aria-live="polite">
+          You make my ordinary world extraordinary.
+        </p>
 
-                                                                                                                                                                                                                                                                                            <section class="screen poem-section" id="poem">
-                                                                                                                                                                                                                                                                                              <div class="floating-hearts" aria-hidden="true"><span>♥</span><span>♥</span></div>
-                                                                                                                                                                                                                                                                                                <div class="poem-content">
-                                                                                                                                                                                                                                                                                                    <h2>Whispers of Love</h2>
-                                                                                                                                                                                                                                                                                                        <p class="subtitle">You are my greatest adventure 💕</p>
-                                                                                                                                                                                                                                                                                                            <div class="ornament">────── ♥ ──────</div>
-                                                                                                                                                                                                                                                                                                                <p class="poem">
-                                                                                                                                                                                                                                                                                                                      In you, I found a love that feels like home,<br>
-                                                                                                                                                                                                                                                                                                                            A gentle warmth that I have always known.<br>
-                                                                                                                                                                                                                                                                                                                                  Through every season, through the years ahead,<br>
-                                                                                                                                                                                                                                                                                                                                        I'll love you more with every word unsaid.
-                                                                                                                                                                                                                                                                                                                                            </p>
-                                                                                                                                                                                                                                                                                                                                                <div class="promise-cards">
-                                                                                                                                                                                                                                                                                                                                                      <div class="promise-card"><span>🌹</span><p>Every day with you<br>is a beautiful gift</p></div>
-                                                                                                                                                                                                                                                                                                                                                            <div class="promise-card"><span>💌</span><p>You are home,<br>wherever you are</p></div>
-                                                                                                                                                                                                                                                                                                                                                                  <div class="promise-card"><span>✨</span><p>I choose you<br>in a thousand different ways</p></div>
-                                                                                                                                                                                                                                                                                                                                                                      </div>
-                                                                                                                                                                                                                                                                                                                                                                          <p class="yours">— Yours, always</p>
-                                                                                                                                                                                                                                                                                                                                                                              <button class="final-button" id="surpriseButton" type="button">♡ One last surprise ♡</button>
-                                                                                                                                                                                                                                                                                                                                                                                  <p class="surprise-message" id="surpriseMessage" hidden>You make my world softer, brighter, and more beautiful. I choose you. Always. ♥</p>
-                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                      <footer>Made with love, just for you ♥</footer>
-                                                                                                                                                                                                                                                                                                                                                                                      </section>
-            </head> </html>
+        <p class="quote-counter" id="quoteCount">01 / 08</p>
+
+        <button class="button primary" id="pickRose" type="button">
+          Pick a Rose 🌹
+        </button>
+
+        <p class="feedback" id="gardenNote" aria-live="polite">
+          A little flower, chosen just for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Love letter -->
+    <section class="section letter-section" id="letter">
+      <div class="section-heading">
+        <p class="eyebrow">CHAPTER TWO · FROM MY HEART</p>
+        <h2>A Letter <span>For You</span></h2>
+        <p>There are feelings that deserve more than a simple text.</p>
+      </div>
+
+      <div class="letter-area">
+        <button
+          class="envelope"
+          id="envelope"
+          type="button"
+          aria-expanded="false"
+          aria-controls="letterPaper"
+        >
+          <span class="envelope-flap"></span>
+          <span class="envelope-heart">♥</span>
+          <span class="envelope-label">For Lovely</span>
+        </button>
+
+        <p class="hint" id="letterHint">
+          Tap the envelope to open your letter ♥
+        </p>
+
+        <article class="letter-paper" id="letterPaper" hidden>
+          <div class="paper-decoration">✦ &nbsp; 🌹 &nbsp; ✦</div>
+
+          <h3>My Dearest Lovely,</h3>
+
+          <p>
+            I wanted to make something that feels a little like us:
+            simple, beautiful, and full of little moments worth keeping.
+          </p>
+
+          <p>
+            You bring a kind of happiness into my life that is hard to
+            explain. Even the smallest memories become special when
+            they have you in them.
+          </p>
+
+          <p>
+            I cannot promise that every day will be perfect, but I hope
+            we keep choosing kindness, understanding, laughter, and
+            each other through all the days ahead.
+          </p>
+
+          <p>
+            If I could save one thing from every beautiful day,
+            it would be the feeling of having you in my world.
+          </p>
+
+          <p class="signature">
+            With all my love,<br>
+            <strong>Yours, Sumit ♥</strong>
+          </p>
+
+          <button class="button secondary" id="closeLetter" type="button">
+            Fold the Letter
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Memories gallery -->
+    <section class="section memories-section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">CHAPTER THREE · OUR LITTLE MOMENTS</p>
+        <h2>Memories <span>Worth Keeping</span></h2>
+        <p>Every picture has a story. These are some of ours.</p>
+      </div>
+
+      <div class="memory-grid">
+        <figure class="memory-card">
+          <img src="https://share.google/dp1SZTw1vtmuqFnOe"
+               alt="A favourite memory of us"
+               loading="lazy">
+          <figcaption>
+            <span>01 · A LITTLE MEMORY</span>
+            <p>The moments I wish I could replay.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="memory-card memory-offset">
+          <img src="https://share.google/PN9FDsR38Geg287mM"
+               alt="Another special memory"
+               loading="lazy">
+          <figcaption>
+            <span>02 · JUST US</span>
+            <p>Little things, big feelings.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="memory-card">
+          <img src="https://share.google/gY5Y9UwhKQngYXfE1"
+               alt="A beautiful moment to remember"
+               loading="lazy">
+          <figcaption>
+            <span>03 · ALWAYS REMEMBER</span>
+            <p>A picture today, a memory forever.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="gallery-note">
+        Our story is still being written. More memories are waiting.
+      </p>
+    </section>
+
+    <!-- Promise section -->
+    <section class="section promises-section" id="promises">
+      <div class="section-heading">
+        <p class="eyebrow">A FEW LITTLE PROMISES</p>
+        <h2>Things I Hope <span>We Keep</span></h2>
+      </div>
+
+      <div class="promise-grid">
+        <article class="promise-card">
+          <span>🌷</span>
+          <h3>Keep Growing</h3>
+          <p>Give each other room to learn, grow and become better.</p>
+        </article>
+
+        <article class="promise-card">
+          <span>💌</span>
+          <h3>Keep Talking</h3>
+          <p>Listen with care, speak with kindness, and be honest.</p>
+        </article>
+
+        <article class="promise-card">
+          <span>✨</span>
+          <h3>Keep the Magic</h3>
+          <p>Find happiness in small things and celebrate little wins.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Final surprise -->
+    <section class="section surprise-section" id="surprise">
+      <div class="surprise-card">
+        <div class="gift-icon" aria-hidden="true">🎁</div>
+
+        <p class="eyebrow">THE LAST LITTLE CHAPTER</p>
+        <h2>One More Thing, <span>Lovely...</span></h2>
+
+        <p>
+          I saved one last message for you.
+          Ready to discover it?
+        </p>
+
+        <button class="button primary" id="surpriseButton" type="button">
+          Open Your Surprise ♡
+        </button>
+
+        <div class="surprise-message" id="surpriseMessage" hidden>
+          <div class="surprise-hearts" aria-hidden="true">♥ ♡ ♥</div>
+          <h3>You are a beautiful part of my story.</h3>
+          <p>
+            No fancy gift could say it quite right.
+            I just hope this little corner of the internet
+            reminds you how special you are to me.
+          </p>
+          <p class="signature">Always with love, Sumit ❤️</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with <span>♥</span> by Sumit, for Lovely.</p>
+    <a href="#home">Back to the beginning ↑</a>
+  </footer>
+</body>
+</html>
