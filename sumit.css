@@ -93,4 +93,69 @@ footer { position: absolute; bottom: 1rem; font-size: .78rem; opacity: .8; }
   .poem-section { padding-top: 6rem; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+.our-memories {
+  padding: 36px 18px;
+  text-align: center;
+}
+
+.our-memories h2 {
+  color: #d63384;
+  margin: 10px 0;
+}
+
+.memory-intro {
+  max-width: 420px;
+  margin: 12px auto 24px;
+  line-height: 1.7;
+  color: #87536c;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.photo-card {
+  margin: 0;
+  padding: 9px;
+  background: #fff7fb;
+  border: 1px solid #ffd2e6;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.12);
+  transform: rotate(-1deg);
+}
+
+.photo-card:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.photo-card figcaption {
+  padding: 10px 3px 4px;
+  color: #b83280;
+  font-size: 14px;
+}
+
+.memory-footer {
+  margin-top: 24px;
+  color: #d63384;
+  font-weight: bold;
+}
+
+@media (max-width: 360px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
                
