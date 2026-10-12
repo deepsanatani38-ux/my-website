@@ -786,3 +786,231 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ===== WHISPERS OF LOVE: ROMANTIC ANIMATIONS ===== */
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Soft romantic background glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.48), transparent 28%),
+    radial-gradient(circle at 85% 72%, rgba(255,100,160,.13), transparent 32%);
+  animation: background-glow 9s ease-in-out infinite alternate;
+}
+
+@keyframes background-glow {
+  from { opacity: .55; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.06); }
+}
+
+/* Floating hearts and sparkles */
+.ambient-heart {
+  position: fixed;
+  left: var(--left);
+  bottom: -45px;
+  z-index: 0;
+  pointer-events: none;
+  color: #ff6b9d;
+  opacity: 0;
+  font-size: var(--size);
+  animation: heart-float var(--duration) linear forwards;
+}
+
+@keyframes heart-float {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(.7);
+    opacity: 0;
+  }
+  15% { opacity: .65; }
+  80% { opacity: .55; }
+  100% {
+    transform: translateY(-115vh) rotate(35deg) scale(1.25);
+    opacity: 0;
+  }
+}
+
+/* Elegant title entrance */
+.hero h1,
+.hero h2,
+.hero .hero-title {
+  animation: title-reveal 1.2s cubic-bezier(.2,.7,.2,1) both;
+}
+
+@keyframes title-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    letter-spacing: 2px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: normal;
+  }
+}
+
+/* Buttons glow gently */
+button,
+.btn,
+.button {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    filter .3s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover {
+  filter: brightness(1.04);
+  box-shadow: 0 8px 24px rgba(220, 55, 115, .22);
+}
+
+button:active,
+.btn:active,
+.button:active {
+  transform: scale(.96);
+}
+
+/* Photos: gentle polaroid-style entrance */
+.gallery img,
+.memories img {
+  transition:
+    transform .5s cubic-bezier(.2,.8,.2,1),
+    box-shadow .5s ease;
+}
+
+.gallery img:hover,
+.memories img:hover {
+  transform: translateY(-7px) rotate(-2deg) scale(1.025);
+  box-shadow: 0 15px 30px rgba(130, 35, 75, .2);
+}
+
+/* Envelope opening */
+#envelope {
+  perspective: 900px;
+  transition: transform .4s ease;
+}
+
+#envelope:hover {
+  transform: translateY(-4px);
+}
+
+#envelope .envelope-flap {
+  transform-origin: top center;
+  transition: transform .75s cubic-bezier(.2,.7,.2,1);
+  backface-visibility: hidden;
+}
+
+#envelope.is-open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+/* Letter appears softly */
+#letterPaper:not([hidden]) {
+  animation: letter-reveal .8s cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes letter-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Surprise message */
+#surpriseMessage:not([hidden]) {
+  animation: surprise-reveal .8s cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes surprise-reveal {
+  0% { opacity: 0; transform: scale(.85) translateY(16px); }
+  75% { opacity: 1; transform: scale(1.025) translateY(-2px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Rose rain */
+.falling-rose {
+  position: fixed;
+  top: -45px;
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+  animation: rose-fall linear forwards;
+}
+
+@keyframes rose-fall {
+  0% { transform: translateY(-10px) rotate(0); opacity: 0; }
+  12% { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(420deg); opacity: 0; }
+}
+
+/* Quote change */
+.quote-change {
+  animation: quote-reveal .45s ease both;
+}
+
+@keyframes quote-reveal {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll reveal */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .75s ease, transform .75s ease;
+}
+
+.section-reveal.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile and accessibility */
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .ambient-heart { font-size: 18px; }
+  .section-reveal { transform: translateY(12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .ambient-heart,
+  .falling-rose {
+    display: none !important;
+  }
+
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
