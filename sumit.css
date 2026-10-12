@@ -787,7 +787,6 @@ img {
   }
 }
 
-/* ===== WHISPERS OF LOVE: ROMANTIC ANIMATIONS ===== */
 
 body {
   overflow-x: hidden;
@@ -816,7 +815,7 @@ body::before {
   to { opacity: 1; transform: scale(1.06); }
 }
 
-/* Floating hearts and sparkles */
+
 .ambient-heart {
   position: fixed;
   left: var(--left);
@@ -842,7 +841,7 @@ body::before {
   }
 }
 
-/* Elegant title entrance */
+
 .hero h1,
 .hero h2,
 .hero .hero-title {
@@ -862,7 +861,7 @@ body::before {
   }
 }
 
-/* Buttons glow gently */
+
 button,
 .btn,
 .button {
@@ -885,7 +884,7 @@ button:active,
   transform: scale(.96);
 }
 
-/* Photos: gentle polaroid-style entrance */
+
 .gallery img,
 .memories img {
   transition:
@@ -899,7 +898,6 @@ button:active,
   box-shadow: 0 15px 30px rgba(130, 35, 75, .2);
 }
 
-/* Envelope opening */
 #envelope {
   perspective: 900px;
   transition: transform .4s ease;
@@ -919,7 +917,7 @@ button:active,
   transform: rotateX(180deg);
 }
 
-/* Letter appears softly */
+
 #letterPaper:not([hidden]) {
   animation: letter-reveal .8s cubic-bezier(.2,.8,.2,1) both;
 }
@@ -935,7 +933,7 @@ button:active,
   }
 }
 
-/* Surprise message */
+
 #surpriseMessage:not([hidden]) {
   animation: surprise-reveal .8s cubic-bezier(.2,.8,.2,1) both;
 }
@@ -946,7 +944,6 @@ button:active,
   100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Rose rain */
 .falling-rose {
   position: fixed;
   top: -45px;
@@ -962,7 +959,7 @@ button:active,
   100% { transform: translateY(110vh) rotate(420deg); opacity: 0; }
 }
 
-/* Quote change */
+
 .quote-change {
   animation: quote-reveal .45s ease both;
 }
@@ -972,7 +969,7 @@ button:active,
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Scroll reveal */
+
 .section-reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -984,7 +981,7 @@ button:active,
   transform: translateY(0);
 }
 
-/* Mobile and accessibility */
+
 [hidden] {
   display: none !important;
 }
