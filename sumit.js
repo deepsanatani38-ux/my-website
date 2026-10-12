@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-// =========================
-// 1. ROSE GARDEN & QUOTES
-// =========================
 const quotes = [
 "You make my ordinary world extraordinary.",
 "If flowers could talk, every rose would say your name.",
@@ -45,10 +42,6 @@ quoteIndex = (quoteIndex + 1) % quotes.length;
 });
 
 }
-
-// =========================
-// 2. ROSE RAIN ANIMATION
-// =========================
 const reduceMotion = window.matchMedia(
 "(prefers-reduced-motion: reduce)"
 ).matches;
@@ -78,10 +71,6 @@ for (let i = 0; i < amount; i++) {
 }
 
 }
-
-// =========================
-// 3. LOVE LETTER OPEN/CLOSE
-// =========================
 const envelope = document.getElementById("envelope");
 const letterPaper = document.getElementById("letterPaper");
 const closeLetter = document.getElementById("closeLetter");
@@ -130,10 +119,6 @@ setLetterOpen(false);
 });
 
 }
-
-// =========================
-// 4. FINAL SURPRISE
-// =========================
 const surpriseButton = document.getElementById("surpriseButton");
 const surpriseMessage = document.getElementById("surpriseMessage");
 
@@ -172,10 +157,6 @@ surpriseButton.addEventListener("click", () => {
 });
 
 }
-
-// =========================
-// 5. SMOOTH NAVIGATION LINKS
-// =========================
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
 link.addEventListener("click", (event) => {
 const targetId = link.getAttribute("href");
@@ -197,10 +178,6 @@ const target = document.querySelector(targetId);
 });
 
 });
-
-// =========================
-// 6. REVEAL SECTIONS ON SCROLL
-// =========================
 const revealItems = document.querySelectorAll(
 ".hero, .section-heading, .garden-card, .letter-card, .gallery, .promise-card, .surprise-card"
 );
