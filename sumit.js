@@ -219,3 +219,82 @@ if ("IntersectionObserver" in window) {
     observer.observe(section);
   });
 }
+.addEventListener("DOMContentLoaded", function () {
+  // Rose button
+  const roseButton = document.getElementById("roseButton");
+  const roseMessage = document.getElementById("roseMessage");
+
+  if (roseButton && roseMessage) {
+    roseButton.addEventListener("click", function () {
+      roseMessage.classList.toggle("hidden");
+
+      roseButton.textContent =
+        roseMessage.classList.contains("hidden")
+          ? "Click to Open Your Rose"
+          : "Hide Your Rose";
+    });
+  }
+
+  // Love letter open/close
+  const letterButton = document.getElementById("letterButton");
+  const loveLetter = document.getElementById("loveLetter");
+  const closeLetterButton =
+    document.getElementById("closeLetterButton");
+
+  if (letterButton && loveLetter) {
+    letterButton.addEventListener("click", function () {
+      loveLetter.classList.remove("hidden");
+      letterButton.textContent = "Letter Opened ❤️";
+
+      loveLetter.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    });
+  }
+
+  if (closeLetterButton && loveLetter) {
+    closeLetterButton.addEventListener("click", function () {
+      loveLetter.classList.add("hidden");
+
+      if (letterButton) {
+        letterButton.textContent = "Open My Love Letter";
+      }
+    });
+  }
+
+  // Surprise button
+  const surpriseButton =
+    document.getElementById("surpriseButton");
+  const surpriseMessage =
+    document.getElementById("surpriseMessage");
+
+  if (surpriseButton && surpriseMessage) {
+    surpriseButton.addEventListener("click", function () {
+      surpriseMessage.classList.toggle("hidden");
+
+      surpriseButton.textContent =
+        surpriseMessage.classList.contains("hidden")
+          ? "Open Your Surprise"
+          : "Hide Surprise";
+    });
+  }
+
+  // Smooth scrolling for menu links
+  document.querySelectorAll('.love-menu a[href^="#"]')
+    .forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        const targetId = link.getAttribute("href");
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          event.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+});
