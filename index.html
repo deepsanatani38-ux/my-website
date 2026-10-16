@@ -3,11 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff1f4">
-  <meta name="description" content="A little romantic world made by Sumit for Lovely.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff1f5">
+  <meta name="description" content="A romantic little world made by Sumit for Lovely.">
   <title>Sumit ♡ Lovely | Our Little World</title>
-
   <link rel="stylesheet" href="sumit.css">
   <script src="sumit.js" defer></script>
 </head>
@@ -15,41 +14,235 @@
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div id="heart-layer" aria-hidden="true"></div>
 
   <header class="topbar">
     <a class="brand" href="#home">S <span>♡</span> L</a>
-
     <nav aria-label="Main navigation">
       <a href="#garden">Garden</a>
       <a href="#letter">Letter</a>
       <a href="#memories">Memories</a>
+      <a href="#heart-maker">Our Heart</a>
       <a href="#surprise">Surprise</a>
     </nav>
   </header>
 
   <main>
-    
     <section class="hero section" id="home">
       <div class="hero-content">
-        <p class="eyebrow">A LITTLE WORLD MADE FOR YOU</p>
-
+        <p class="eyebrow">A LITTLE WORLD MADE JUST FOR YOU</p>
         <h1>Sumit <span class="heart">♥</span><br>
           <span class="name-accent">Lovely</span>
         </h1>
-
         <p class="hero-description">
-          Some people make ordinary days feel magical.
-          You are that person in my story.
+          In a world full of ordinary things, you are my favourite
+          little piece of magic. This corner of the internet is for you.
         </p>
-
         <a class="button primary" href="#garden">
-          Enter Our Little World <span>♡</span>
+          Enter Our Little World ♡
         </a>
-
-        <p class="tiny-note">Made with love, just for you.</p>
+        <p class="tiny-note">Made with love, just for you. 🌹</p>
       </div>
 
-      <div class="hero-art" aria-label="A romantic rose illustration">
+      <div class="hero-art">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="rose-illustration">🌹</div>
+        <span class="floating-heart heart-one">♥</span>
+        <span class="floating-heart heart-two">♡</span>
+        <span class="floating-heart heart-three">♥</span>
+        <div class="art-caption">
+          <span>MY FAVOURITE PERSON</span>
+          <strong>Always you, Lovely.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="garden">
+      <div class="section-heading">
+        <p class="eyebrow">CHAPTER ONE · THE GARDEN</p>
+        <h2>A Rose for <span>My Lovely</span></h2>
+        <p>Tap the button and discover another little thought.</p>
+      </div>
+
+      <div class="garden-card">
+        <div class="garden-flower">🌹</div>
+        <p class="garden-quote" id="quoteText" aria-live="polite">
+          You make my ordinary world extraordinary.
+        </p>
+        <p class="quote-counter" id="quoteCount">01 / 08</p>
+        <button class="button primary" id="pickRose" type="button">
+          Pick a Rose 🌹
+        </button>
+        <p class="feedback" id="gardenNote" aria-live="polite">
+          A little flower, chosen just for you.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="letter">
+      <div class="section-heading">
+        <p class="eyebrow">CHAPTER TWO · FROM MY HEART</p>
+        <h2>A Letter <span>For You</span></h2>
+        <p>Some feelings deserve more than a simple text.</p>
+      </div>
+
+      <div class="letter-area">
+        <button class="envelope" id="envelope" type="button"
+          aria-expanded="false" aria-controls="letterPaper"
+          aria-label="Open the love letter">
+          <span class="envelope-flap"></span>
+          <span class="envelope-heart">♥</span>
+          <span class="envelope-label">For Lovely</span>
+        </button>
+
+        <p class="hint" id="letterHint">
+          Tap the envelope to open your letter ♥
+        </p>
+
+        <article class="letter-paper" id="letterPaper" hidden>
+          <div class="paper-decoration">✦ 🌹 ✦</div>
+          <h3>My Dearest Lovely,</h3>
+          <p>
+            I made this little world because you deserve something
+            thoughtful, something made with care, and something that
+            brings a smile to your face.
+          </p>
+          <p>
+            You make ordinary moments feel special. Sometimes the
+            smallest things become our favourite memories, simply
+            because they have a little piece of you in them.
+          </p>
+          <p>
+            I hope we keep choosing kindness, honesty, laughter and
+            understanding. I hope we keep growing and making beautiful
+            memories, one little moment at a time.
+          </p>
+          <p>
+            No website can hold every feeling in my heart, but this
+            little page is one way of saying: you matter to me.
+          </p>
+          <p class="signature">With all my love,<br>
+            <strong>Yours, Sumit ♥</strong>
+          </p>
+          <button class="button secondary" id="closeLetter" type="button">
+            Fold the Letter
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">CHAPTER THREE · LITTLE MOMENTS</p>
+        <h2>Memories <span>Worth Keeping</span></h2>
+        <p>Every picture has a story. These are some of ours.</p>
+      </div>
+
+      <div class="memory-grid">
+        <figure class="memory-card">
+          <img src="./Image/file_00000000e9a881fa9c73449c61b9a72e.png"
+            alt="A favourite memory" loading="lazy">
+          <figcaption>
+            <span>01 · A LITTLE MEMORY</span>
+            <p>The moments I wish I could replay.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="memory-card memory-offset">
+          <img src="./Image/file_0000000057848211b8bee136beb82837.png"
+            alt="Another special memory" loading="lazy">
+          <figcaption>
+            <span>02 · JUST US</span>
+            <p>Little things, big feelings.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="memory-card">
+          <img src="./Image/Snapchat-440921682.jpg"
+            alt="A beautiful moment to remember" loading="lazy">
+          <figcaption>
+            <span>03 · ALWAYS REMEMBER</span>
+            <p>A picture today, a memory forever.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="gallery-note">Our story is still being written. ♡</p>
+    </section>
+
+    <section class="section" id="promises">
+      <div class="section-heading">
+        <p class="eyebrow">A FEW LITTLE PROMISES</p>
+        <h2>Things I Hope <span>We Keep</span></h2>
+      </div>
+
+      <div class="promise-grid">
+        <article class="promise-card">
+          <span>🌷</span>
+          <h3>Keep Growing</h3>
+          <p>Give each other room to learn, grow and become better.</p>
+        </article>
+        <article class="promise-card">
+          <span>💌</span>
+          <h3>Keep Talking</h3>
+          <p>Listen with care, speak with kindness, and be honest.</p>
+        </article>
+        <article class="promise-card">
+          <span>✨</span>
+          <h3>Keep the Magic</h3>
+          <p>Find happiness in little things and celebrate small wins.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="heart-maker">
+      <div class="heart-maker-card">
+        <p class="eyebrow">A LITTLE SOMETHING EXTRA</p>
+        <h2>Create a Heart <span>For Us</span> 💗</h2>
+        <p>Write a little message. Then open a new page to see it
+          inside a glowing, beating heart.</p>
+        <form id="heartForm">
+          <label for="heartMessage">Your special message</label>
+          <input id="heartMessage" name="message" maxlength="100"
+            placeholder="For example: You are my favourite person..."
+            required>
+          <button class="button primary" type="submit">
+            Create Our Heart 💖
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="surprise">
+      <div class="surprise-card">
+        <div class="gift-icon">🎁</div>
+        <p class="eyebrow">THE LAST LITTLE CHAPTER</p>
+        <h2>One More Thing, <span>Lovely...</span></h2>
+        <p>I saved one last message for you. Ready to discover it?</p>
+        <button class="button primary" id="surpriseButton" type="button"
+          aria-expanded="false" aria-controls="surpriseMessage">
+          Open Your Surprise ♡
+        </button>
+        <div class="surprise-message" id="surpriseMessage" hidden>
+          <div class="surprise-hearts">♥ ♡ ♥</div>
+          <h3>You are a beautiful part of my story.</h3>
+          <p>
+            No fancy gift could say it quite right. I hope this little
+            corner of the internet reminds you how special you are.
+          </p>
+          <p class="signature">Always with love, Sumit ❤️</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with <span>♥</span> by Sumit, for Lovely.</p>
+    <a href="#home">Back to the beginning ↑</a>
+  </footer>
+</body>
+</html>
+
         <div class="art-orbit orbit-one"></div>
         <div class="art-orbit orbit-two"></div>
         <div class="rose-illustration" aria-hidden="true">🌹</div>
